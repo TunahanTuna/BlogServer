@@ -3,6 +3,7 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
+import postRoutes from "./routes/posts.js"
 
 const app = express();
 dotenv.config();
@@ -17,6 +18,8 @@ app.get("/",(req , res)=>{
         message: "HELLO NODE.JS :)"
     });
 })
+
+app.use("/posts", postRoutes); // Gönderileri Rouets klasöründeki ilgili router ile işlemek için.
 
 const PORT = process.env.PORT || 5000;
 
