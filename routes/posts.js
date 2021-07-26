@@ -1,5 +1,7 @@
 import express from "express"; 
-import { getPosts } from "../controllers/posts.js"
+import { getPosts, createPost } from "../controllers/posts.js"
+
+
 // Express Router kullanılacak
 const router = express.Router();
 
@@ -7,6 +9,6 @@ const router = express.Router();
 
 //GET
 router.get("/",getPosts); // Controller çağırır.
-
+router.post("/",createPost)
 // Exporting
 export default router;
