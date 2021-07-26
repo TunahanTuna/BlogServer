@@ -9,6 +9,6 @@ const router = express.Router();
 
 //GET
 router.get("/",getPosts); // Controller çağırır.
-router.post("/",createPost)
+router.post("/",createPost);
 // Exporting
 export default router;
